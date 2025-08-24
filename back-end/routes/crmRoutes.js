@@ -64,6 +64,7 @@ router.put("/updateType/:id", async (req, res) => {
   }
 });
 
+
 router.delete("/deleteCrm/:id", async (req, res) => {
   try {
     const crm = await CrmData.findOneAndDelete({ id: req.params.id });
