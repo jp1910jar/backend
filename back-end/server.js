@@ -7,6 +7,7 @@ import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth.js";
 import productRoutes from "./routes/product.js";
 import salesRoutes from "./routes/sales.js"
+import crmRoutes from "./routes/crmRoutes.js"; 
 
 
 const app = express();
@@ -23,6 +24,7 @@ app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/sales", salesRoutes);
+app.use("/api/crm", crmRoutes); 
 
 
 
